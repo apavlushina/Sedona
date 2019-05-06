@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Resort SEDONA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,18 +24,69 @@
   </header>
 
 <main>
+
+
   <section class="filters">
-    FORM!!!
+    <h2 class="visually-hidden">Product filters:</h2>
+    <form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
+      <fieldset>
+        <legend>Infrastructure:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
+            <label for="filter-swimming-pool">Swimming pool</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+            <label for="filter-parking">Parking</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="suavecito" id="filter-Wi-Fi">
+            <label for="filter-Wi-Fi">Wi-Fi</label>
+          </li>
+        </ul>
+
+        <legend>Type:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+            <label for="filter-hotel">Hotel</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+            <label for="filter-motel">Motel</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+            <label for="filter-apartments">Apartments</label>
+          </li>
+        </ul>
+
+
+        <div class="half-width">
+          <label for="price">Price:</label><br>
+          <output name="priceoutput"></output><br>
+          <input type="range" id="price" name="price" min="0" max="100" step="10">
+        </div>
+      </fieldset>
+
+      <button type="submit" class="filter-button button">Show results</button>
+    </form>
   </section>
+
   <div class="results">
     <p>3 results</p>
     <p>Sort by:</p>
     <ul>
-      <li>Price</li>
-      <li>Rating</li>
-      <li>Type</li>
+      <li><a href="#">Price</a></li>
+      <li><a href="#">Rating</a></li>
+      <li><a href="#">Type</a></li>
     </ul>
   </div>
+
+!!! SOrt with css
+https://htmlacademy.ru/courses/96/run/29
+
 
   <section class="catalog">
     <ul class="catalog-list">
@@ -96,7 +148,7 @@
     <p class="footer-copyright">Copyright 2019</p>
     <a class="button" href="#"><img src="img/logo-htmlacademy.svg" height="20" alt="Logo HTML-Academy" ></a>
   </footer>
-  
+
 </body>
 
 </html>
