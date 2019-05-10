@@ -34,55 +34,85 @@
       <p>Below you can find 5 reasons why Sedona is much better than Grand Canyon!</p>
     </section>
     <section class="main-reason main-reason-first">
+      <div class="main-reason-text">
       <h3>Real small city</h3>
       <p> - №1 - </p>
-      <p>Not just a touristic village, but a place with its own life</p>
+      <p>Not just a touristic village,<br> but a place with its own life</p>
+    </div>
+      <img src="img/mainimage-1.jpg" alt="Sedona, photo" width="800px" height="255px">
     </section>
     <section class="feachers">
       <ul class="feachers-list">
-        <li class="feachers-item">
+        <li class="feachers-item-first">
           <h3>Apartments</h3>
-          <p>Try to stay in the real motel - just like in the movie!</p>
+          <p>Try to stay in the real motel - <br> just like in the movie!</p>
         </li>
-        <li class="feachers-item">
-          <h3>Food</h3>
-          <p>Always order shef-burger. You will not be disappointed!</p>
-        </li>
-        <li class="feachers-item">
+        <li class="feachers-item-second">
           <h3>Souvenirs</h3>
-          <p>Not only from China, but also from the local manufactures!</p>
+          <p>Not only from China, <br> but also from <br> the local manufactures!</p>
         </li>
+        <li class="feachers-item-third">
+          <h3>Food</h3>
+          <p>Always order shef-burger. <br>  You will not be disappointed!</p>
+        </li>
+
       </ul>
     </section>
     <section class="main-reason main-reason-second">
+      <img src="img/mainimage-2.jpg" alt="Sedona, photo" width="800px" height="255px">
+      <div class="main-reason-text">
       <h3>It has a Devil's bridge</h3>
       <p> - №2 - </p>
-      <p>And YES, you can cross it, if you are ready for this adventure</p>
+      <p>And YES, you can cross it, <br> if you are ready for this adventure</p>
+      </div>
     </section>
     <section class="small-reason">
-      <ul class="small-reason-list">
+      <ul class="feachers-list">
         <li class="small-reason-item">
           <h3>Small square</h3>
           <p> - №3 - </p>
-          <p>So all masterpieces are very close to you</p>
+          <p>So all masterpieces are <br>very close to you</p>
         </li>
         <li class="small-reason-item">
           <h3>Beautiful road</h3>
           <p> - №4 - </p>
-          <p>It is not boring at all to ride here from Las-Vegas</p>
+          <p>It is not boring at all <br> to ride here from Las-Vegas</p>
         </li>
         <li class="small-reason-item">
           <h3>Few tourists</h3>
           <p> - №5 - </p>
-          <p>Because the main crowd is in Grand Canyon</p>
+          <p>Because the main crowd <br> is in Grand Canyon</p>
         </li>
       </ul>
     </section>
     <section class="extra-info">
-      <h3>Are you interested?</h3>
+      <h3 class="question">Are you interested?</h3>
       <p>Input the dates of your trip <br>
         and we will show your the best offers from Sedona's hotels</p>
-      <a class="button" href="#">Find a hotel</a> <br>
+      <a class="button-find" href="#">Find a hotel in Sedona</a>
+      <div class="modal">
+        <form class="find-hotel" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="date-arrival" for="date-arrival">Date of arrival</label>
+            <input class="input-date" id="date-arrival" type="date" name="Date" placeholder="31-12-2019">
+          </p>
+          <p>
+            <label class="date-departure" for="date-departure">Departure date</label>
+            <input class="input-date" id="date-departure" type="date" name="Date" placeholder="01-02-2020">
+          </p>
+          <p>
+            <label class="amount" for="count-adults">Adults</label>
+            <input class="amount" id="count-adults" type="number" name="Amount" placeholder="2" min="1">
+          </p>
+          <p>
+            <label class="amount" for="count-children">Children</label>
+            <input class="amount" id="count-children" type="number" name="Amount" placeholder="2" min="0">
+          </p>
+          <button type="submit" class="button">Search</button>
+        </form>
+      </div>
+
+      <br>
 <!--
      <img src="img/map.png" alt="You can easily find us on the map">
    -->
@@ -90,46 +120,25 @@
   </main>
 
   <footer class="main-footer">
-    <p><br>#VISITSEDONA</br></p>
+    <p>#VISITSEDONA</br></p>
     <div>
       <ul class="social">
         <li>
-          <a class="button" href="https://twitter.com/sedonatvcom" area-label="Twitter"><img src="img/twitter.svg" height="20" alt="Logo Twitter"></a>
+          <a class="social-button" href="https://twitter.com/sedonatvcom" area-label="Twitter"><img src="img/twitter.svg" height="20" alt="Logo Twitter"></a>
         </li>
         <li>
-          <a class="button" href="https://www.facebook.com/VisitSedona/m" area-label="Facebook"><img src="img/fb-icon.svg" height="20" alt="Logo Facebook"></a>
+          <a class="social-button" href="https://www.facebook.com/VisitSedona/m" area-label="Facebook"><img src="img/fb-icon.svg" height="20" alt="Logo Facebook"></a>
         </li>
         <li>
-          <a class="button" href="https://www.youtube.com/watch?v=zhNbLNGDIn8" area-label="YouTube"><img src="img/youtube.svg" height="20" alt="Logo YouTube"></a>
+          <a class="social-button" href="https://www.youtube.com/watch?v=zhNbLNGDIn8" area-label="YouTube"><img src="img/youtube.svg" height="20" alt="Logo YouTube"></a>
         </li>
       </ul>
     </div>
     <p class="footer-copyright">Copyright 2019</p>
-    <a class="button" href="#"><img src="img/logo-htmlacademy.svg" height="20" alt="Logo HTML-Academy"></a>
   </footer>
 
 </body>
 
-<section class="modal modal-login">
-  <form class="find-hotel" action="https://echo.htmlacademy.ru" method="post">
-    <p>
-      <label class="date-arrival" for="date-arrival">Arrival date</label>
-      <input class="input-date" id="date-arrival" type="date" name="Date" placeholder="31-12-2019">
-    </p>
-    <p>
-      <label class="date-departure" for="date-departure">Departure date</label>
-      <input class="input-date" id="date-departure" type="date" name="Date" placeholder="01-02-2020">
-    </p>
-    <p>
-      <label class="amount" for="count-adults">Adults</label>
-      <input class="amount" id="count-adults" type="number" name="Amount" placeholder="2" min="1">
-    </p>
-    <p>
-      <label class="amount" for="count-children">Children</label>
-      <input class="amount" id="count-children" type="number" name="Amount" placeholder="2" min="0">
-    </p>
-    <button type="submit" class="button">Search</button>
-  </form>
-</section>
+
 
 </html>
