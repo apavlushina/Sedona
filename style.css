@@ -25,6 +25,21 @@ li {
   list-style: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .site-navigation {
   margin-top: 20px;
   padding: 0;
@@ -44,6 +59,8 @@ li {
 .site-navigation img {
   margin-top: -20px;
   width: 138px;
+  position: relative;
+  z-index: 10;
 }
 
 .extra-info {
@@ -177,6 +194,9 @@ li {
   margin-left: 5px;
   border: none;
   background-color: #f2f2f2;
+  background-image: url("img/calendar.png");
+  background-repeat: no-repeat;
+  background-position: 280px center;
 }
 
 .modal input[type="number"] {
@@ -191,7 +211,7 @@ li {
   background-color: #f2f2f2;
 }
 
-.button {
+.button-search {
   display: block;
   border: none;
   background-color: #81b2d2;
@@ -252,4 +272,181 @@ li {
 
 .social-button:active {
   background-color: #5596be;
+}
+
+.filters {
+  background: #74a0c3 url("img/filterbackground.png") no-repeat 0 -50px;
+  margin-top: -30px;
+}
+
+.results {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  height: 85px;
+  width: 1200px;
+  align-items: baseline;
+}
+
+.results h3 {
+  font-size: 21px;
+  padding-left: 60px;
+  margin-right: 35px;
+}
+
+.results-class {
+  display: flex;
+  color: #f2f2f2;
+}
+
+.results-class a {
+  padding-right: 25px;
+  color: #c9c9c9;
+}
+
+.results-class a:hover,
+.choosen a {
+  color: #82b3d3;
+}
+
+.results-class a:active {
+  color: black;
+}
+
+.catalog-list {
+  flex-direction: column;
+}
+
+.catalog-item {
+  display: flex;
+  height: 150px;
+  width: 1200px;
+  margin-left: -35px;
+  position: relative;
+  border: 1px solid #cacaca;
+  margin-top: -1px;
+}
+
+.review {
+  position: absolute;
+  bottom: 25px;
+  right: 80px;
+  background-color: #f2f2f2;
+  display: block;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.review-one::before {
+  content:"";
+  background: url("img/star.svg") repeat 0% 50%;
+  width: 72px;
+  height: 17px;
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+}
+
+.review-two::before {
+  content:"";
+  background: url("img/star.svg") repeat 0% 50%;
+  width: 54px;
+  height: 17px;
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+}
+
+.review-three::before {
+  content:"";
+  background: url("img/star.svg") repeat 0% 50%;
+  width: 35px;
+  height: 17px;
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+}
+
+
+.catalog-item img {
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 60px;
+}
+
+.catalog-item h3 {
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 25px;
+  font-size: 21px;
+}
+
+.catalog-item h3:hover {
+  color: #82b3d3;
+}
+
+.catalog-item h3:active {
+  color: #f2f2f2;
+}
+
+.block {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 0;
+
+}
+
+.block-left {
+  left: 200px;
+  top: 50px;
+
+}
+
+.block-right {
+  left: 330px;
+  top: 50px;
+
+}
+
+.button {
+  display: block;
+  margin-top: 9px;
+  width: 120px;
+  height: 30px;
+  color: white;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.button-left {
+  background-color: #82b3d3;
+}
+
+.button-left:hover {
+  background-color: #669ebf;
+}
+
+.button-left:active {
+  background-color: #5596be;
+}
+
+.button-right {
+  background-color: #766257;
+}
+
+.button-right:hover {
+  background-color: #604e44;
+}
+
+.button-right:active {
+  background-color: #503e34;
 }
