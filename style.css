@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+li a {
+  color: inherit;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -274,9 +278,104 @@ input[type="radio"].visually-hidden {
   background-color: #5596be;
 }
 
+.current-page a {
+  color: #766257;
+}
+
 .filters {
-  background: #74a0c3 url("img/filterbackground.png") no-repeat 0 -50px;
+  position: relative;
+  background: #74a0c3 url("img/filterbackground.png") no-repeat 0px 50%;
   margin-top: -30px;
+  height: 220px;
+}
+
+.filter {
+  display: flex;
+  outline-color: transparent;
+  font-size: 16px;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sort-infrastructure,
+.sort-type {
+  margin-left: 70px;
+  margin-top: 35px;
+}
+
+.filter-option {
+  padding-bottom: 20px;
+  margin-left: -40px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+
+
+input[type="checkbox"] + .checkbox-indocator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url("img/checkbox-off.svg");
+}
+
+input[type="checkbox"]:checked + .checkbox-indocator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  background-size: 23px 23px;
+  background-image: url("img/checkbox-on.svg");
+}
+
+
+.half-width {
+  margin-top: -45px;
+  margin-right: 70px;
+  margin-left: 395px;
+  width: 250px;
+  text-align: center;
+}
+
+.priceoutput {
+  display: block;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 10px 0 -20px 55px;
+}
+
+.filter-button {
+  position: absolute;
+  bottom: 40px;
+  right: 165px;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.filter-button:hover {
+  color: black;
+  background-color: white;
 }
 
 .results {

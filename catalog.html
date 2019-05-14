@@ -11,13 +11,13 @@
 
   <header class="main-header">
       <ul class="site-navigation">
-        <li><a href="index.html"></a>About us</li>
-        <li><a href="photos"></a>Foto and video</li>
+        <li><a href="index.html">About us</a></li>
+        <li><a href="photos">Foto and video</a></li>
         <li>  <a class="main-header-logo">
             <img src="img/mainlogo.png" width=10% alt="Logo SEDONA">
           </a></li>
-        <li><a href="feedback"></a>Your feedback</li>
-        <li><a href="catalog.html"></a>Hotels</li>
+        <li><a href="feedback">Your feedback</a></li>
+        <li class="current-page"><a href="catalog.html">Hotels</a></li>
       </ul>
   </header>
 
@@ -26,48 +26,62 @@
 
   <section class="filters">
     <form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
-      <fieldset>
-        <p>Infrastructure:</p>
+      <div class="sort-infrastructure">
+      <p>Infrastructure:</p>
         <ul>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
-            <label for="filter-swimming-pool">Swimming pool</label>
+            <label for="filter-swimming-pool">
+            <input class="visually-hidden filter-input" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
+            <span class="checkbox-indocator"></span>
+            Swimming pool</label>
           </li>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
-            <label for="filter-parking">Parking</label>
+            <label for="filter-parking">
+            <input class="visually-hidden filter-input" type="checkbox" name="parking" id="filter-parking">
+            <span class="checkbox-indocator"></span>
+            Parking</label>
           </li>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="suavecito" id="filter-Wi-Fi">
-            <label for="filter-Wi-Fi">Wi-Fi</label>
+            <label for="filter-Wi-Fi">
+            <input class="visually-hidden filter-input" type="checkbox" name="suavecito" id="filter-Wi-Fi">
+            <span class="checkbox-indocator"></span>
+            Wi-Fi</label>
           </li>
         </ul>
+        </div>
 
+        <div class="sort-type">
         <p>Type:</p>
         <ul>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-            <label for="filter-hotel">Hotel</label>
+            <label for="filter-hotel">
+            <input class="visually-hidden filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
+            <span class="checkbox-indocator"></span>
+            Hotel</label>
           </li>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-            <label for="filter-motel">Motel</label>
+            <label for="filter-motel">
+            <input class="visually-hidden filter-input" type="checkbox" name="motel" id="filter-motel" checked>
+            <span class="checkbox-indocator"></span>
+            Motel</label>
           </li>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-            <label for="filter-apartments">Apartments</label>
+            <label for="filter-apartments">
+            <input class="visually-hidden filter-input" type="checkbox" name="apartments" id="filter-apartments" checked>
+            <span class="checkbox-indocator"></span>
+            Apartments</label>
           </li>
         </ul>
-
+        </div>
 
         <div class="half-width">
-          <label for="price">Price:</label><br>
-          <output name="priceoutput"></output><br>
-          <input type="range" id="price" name="price" min="0" max="100" step="10">
+          <label for="price">Price per night (euro):</label><br>
+          <output name="priceoutput" class="priceoutput"></output><br>
+          <input type="range" id="price" name="price" min="0" max="200" step="10">
         </div>
-      </fieldset>
 
-      <button type="submit" class="filter-button button">Show results</button>
+
+      <button type="submit" class="filter-button">Show results</button>
     </form>
   </section>
 
