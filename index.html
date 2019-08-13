@@ -9,14 +9,15 @@
 
 <body>
 
+
   <header class="main-header">
       <ul class="site-navigation">
         <li class="current-page"><a href="index.html">About us</a></li>
-        <li><a href="photos">Foto and video</a></li>
-        <li>  <a class="main-header-logo">
+        <li><a href="#">Foto and video</a></li>
+        <li>  <a href="index.html" class="main-header-logo">
             <img src="img/mainlogo.png" width=10% alt="Logo SEDONA">
           </a></li>
-        <li><a href="feedback">Your feedback</a></li>
+        <li><a href="#">Your feedback</a></li>
         <li><a href="catalog.html">Hotels</a></li>
       </ul>
   </header>
@@ -30,7 +31,7 @@
         <img src="img/lozung.png" height="70" alt="Because the Grand Canyon Sucks!">
       </div>
       <h3>Sedona is a small city in Arizona <br>
-        which deserves more!</h3>
+        who deserves more!</h3>
       <p>Below you can find 5 reasons why Sedona is much better than Grand Canyon!</p>
     </section>
     <section class="main-reason main-reason-first">
@@ -89,8 +90,8 @@
       <h3 class="question">Are you interested?</h3>
       <p>Input the dates of your trip <br>
         and we will show your the best offers from Sedona's hotels</p>
-      <a class="button-find" href="#">Find a hotel in Sedona</a>
-      <div class="modal">
+      <button class="button-find toggle">Find a hotel in Sedona</button>
+      <div class="modal modal--closed">
         <form class="find-hotel" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="date-arrival" for="date-arrival">Date of arrival</label>
@@ -116,6 +117,9 @@
 <!--
      <img src="img/map.png" alt="You can easily find us on the map">
    -->
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d628819.9757188058!2d-111.94619469117893!3d34.73531954509635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2snl!4v1558367623507!5m2!1sru!2snl" width="1200" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+
     </section>
   </main>
 
@@ -136,6 +140,24 @@
     </div>
     <p class="footer-copyright">Copyright 2019</p>
   </footer>
+
+  <script>
+
+  var modalWindow = document.querySelector('.modal');
+  var modalToggle = document.querySelector('.toggle');
+
+  modalToggle.addEventListener('click', function() {
+    if (modalWindow.classList.contains('modal--closed')) {
+      modalWindow.classList.remove('modal--closed');
+      modalWindow.classList.add('modal--opened');
+    } else {
+      modalWindow.classList.add('modal--closed');
+      modalWindow.classList.remove('modal--opened');
+    }
+  }
+);
+
+  </script>
 
 </body>
 
